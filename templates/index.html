@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator Pengeluaran</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Kalkulator Pengeluaran Bulanan</h1>
+        <form action="/" method="post">
+            <div class="form-group">
+                <label for="pendapatan">Pendapatan:</label>
+                <input type="number" id="pendapatan" name="pendapatan" required>
+            </div>
+            
+            <h2>Pengeluaran</h2>
+            <div class="form-group">
+                <label for="makanan">Makanan:</label>
+                <input type="number" id="makanan" name="makanan" required>
+            </div>
+
+            <div class="form-group">
+                <label for="transportasi">Transportasi:</label>
+                <input type="number" id="transportasi" name="transportasi" required>
+            </div>
+
+            <div class="form-group">
+                <label for="utilitas">Utilitas:</label>
+                <input type="number" id="utilitas" name="utilitas" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lainnya">Lainnya:</label>
+                <input type="number" id="lainnya" name="lainnya" required>
+            </div>
+
+            <button type="submit" class="btn">Hitung</button>
+        </form>
+    </div>
+</body>
+</html>

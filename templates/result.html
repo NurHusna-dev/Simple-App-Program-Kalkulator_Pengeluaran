@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Perhitungan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='syle.css') }}">
+</head>    
+<body>
+    <div class="container result">
+        <h1>Hasil Perhitungan</h1>
+
+        <div class="summary">
+            <p><strong>Pendapatan:</strong> Rp {{ "{:,.of}".format(pendapatan) }}</p>
+            <p><strong>Total Pengeluaran:</strong> Rp {{ "{:,.of}".format(total) }}</p>
+            <p><strong>Sisa:</strong> Rp {{ "{:,.of}".format(sisa) }}</p>
+            <p><strong>Persentase Pengeluaran:</strong> Rp {{ "{:,.of}".format(persen) }}%</p>
+        </div>
+
+        <h2>Rincian</h2>
+        <div class="details">
+            <div class="item"><span>Makanan:</span> <span> Rp {{ "{:,.0f}".format(pengeluaran.makanan) }}</span></div>
+            <div class="item"><span>Transportasi:</span> </span> Rp {{ "{:,.0f}".format(pengeluaran.transportasi) }}</span></div>
+            <div class="item"><span>Utilitas:</span> </span> Rp {{ "{:,.0f}".format(pengeluaran.utilitas) }}</span></div>
+            <div class="item"><span>Lainnya:</span> </span> Rp {{ "{:,.0f}".format(pengeluaran.lainnya) }}</span></div>
+        </div>
+
+        <a href="/" class="btn">Kembali</a>
+    </div>
+</body>
+</html>
